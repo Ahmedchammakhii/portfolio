@@ -12,14 +12,7 @@
 </template>
 
 <style scoped>
-@font-face {
-  font-family: "Valencia";
-  src: local("Valencia"),
-   url(../fonts/Valencia.ttf) format("truetype"); }
-   @font-face {
-  font-family: "sanshaa";
-  src: local("sanshaa"),
-   url(../fonts/sansha.ttf) format("truetype"); }
+
 h1 {
     font-family: Valencia;
     font-size: calc(6rem + 2vw);
@@ -32,7 +25,7 @@ h3{
 }
 .greetings {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
