@@ -1,19 +1,44 @@
-<script setup lang="ts">
+<script setup lang="ts" >
+
+const props = defineProps<{
+  number: string;
+  name: string;
+  description: string;
+}>();
+
 import { onMounted, ref } from 'vue';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap"
 gsap.registerPlugin(ScrollTrigger);
 onMounted(()=>{
-    gsap.to( "span",{duration:1,   x:"100%" , delay:.5 ,scrollTrigger : {
-        trigger:".project"
+    gsap.to( `.project-${props.number} span`,{duration:1,   x:"100%" , delay:.5 ,scrollTrigger : {
+        trigger:`.project-${props.number}`,  toggleActions: "play reverse play reverse",
     }} )
-    gsap.to (".phone",{y:"-40%", scale:1.1,scrollTrigger : {
-        trigger:".project",
-        toggleActions: "play reverse play reverse",      scrub: true, 
-        
+    gsap.to (`.project-${props.number} .phone`,{y:"-40%", scale:1.1,scrollTrigger : {
+        trigger:`.project-${props.number}`,
+        toggleActions: "play reverse play reverse",    
+     scrub: true, 
         
         
     }})
+    const effect = gsap.to(`.project-${props.number}`, {
+        opacity: 0.7,
+        y:"-15%",
+        duration: 1,
+      scrollTrigger:{
+        trigger: '.end-'+props.number, 
+        end: 'bottom bottom', 
+        onLeave: () => {
+            effect.play()
+      
+            
+},
+
+        toggleActions: "play reverse play reverse",    
+
+      }
+      });
+
 
 
 })
@@ -21,14 +46,14 @@ onMounted(()=>{
 </script>
 
 <template>
-<article class="project">
+<article :class="'project-'+number">
 <div class="top_container">
-    <p class="parag">01 <span></span></p>
+    <p class="parag">{{number}} <span></span></p>
 </div>
 <div class="wrapper">
 <div class="content_wrapper">
     <div class="title">
-       <p class="parag">KAIZEN TN <span></span></p>  
+       <p class="parag">{{name}} <span></span></p>  
     </div>
     <div class="tags">
         <div class="dot"></div>
@@ -38,7 +63,7 @@ onMounted(()=>{
         <div class="dot"></div>
     </div>
     <div class="description">
-       <p class="parag">Portfolio for a branding agency made within 2 days <span></span>
+       <p class="parag">{{description}} <span></span>
     </p></div>
 </div>
 <div class="photos_wrapper">
@@ -50,7 +75,9 @@ onMounted(()=>{
 
 </div>
 </div>
-</article>
+<div class="end" style="height: 30vh;"></div>
+</article><div :class="'end-'+number" style="margin-bottom: 30vh;"></div>
+
 </template>
 
 <style scoped>
@@ -95,6 +122,7 @@ gap: 20px;
     width: 100%;
     height: 100%;
     display: flex;
+    padding-bottom: 200px;
 }
 .description {
     font-size: calc(1rem + 1vw);
@@ -132,6 +160,10 @@ p {
     padding: 0;
     overflow: hidden;
     width: max-content;
+}
+.description p {
+    max-width: 90%;
+
 }
 span{
     position: absolute;
