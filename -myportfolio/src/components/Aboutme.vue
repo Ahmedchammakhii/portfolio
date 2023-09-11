@@ -11,7 +11,11 @@ onMounted(() => {
     scrollTrigger: {
       trigger: "#main_container",
       start: "top top",
-      end: () => `+=${document.querySelector("#main_container").offsetHeight /2 }`,
+      end: () => {
+        const mainContainer = document.querySelector("#main_container");
+        if (mainContainer instanceof HTMLElement) {
+    return `+=${mainContainer.offsetHeight /2 }`  }
+else {return "bottom bottom"}},
       scrub: true,
       pin: true, 
     }

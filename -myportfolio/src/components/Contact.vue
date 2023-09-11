@@ -9,10 +9,11 @@ const  data = ref( {
         message: "",
       })
       const submitForm =()=> {
+        
       emailjs.send("service_8xz21y9", "template_f514fhg", {...data,to_name:"ahmed"}, "2GESCxzoh06lJKiVv")
-        .then((response) => {
+        .then((response : any) => {
 display.value=!display.value      })
-        .catch((error) => {
+        .catch((error : any) => {
     console.log(error);
     
         });
