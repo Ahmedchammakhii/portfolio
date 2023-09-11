@@ -25,9 +25,14 @@ timeline.to(".right_quote",{
 
     scrub:true,
 }
-},"+=10")
-
+},"+=15")
+gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
+        trigger:".content_wrapper__contact"
+        , start:"top 70%",
+        scrub:true
+    }})
     })
+   
     // let isTrue = ref(false)
 
 // const handleAnimationEnd = () => {
@@ -60,14 +65,12 @@ timeline.to(".right_quote",{
 </h2>
 <h2>ASTRO</h2>
 <h2>NEXT JS</h2>
-<h2>VUE JS</h2>
+<h2>VUE JS *Thanks to fanprime*</h2>
 <h2>NODE JS</h2>
     </div>
     <div class="set">
         <h2>Project Management
 
-</h2>
-<h2>React
 </h2>
 <h2>Visual Communication
 </h2>
