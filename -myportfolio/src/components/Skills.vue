@@ -93,8 +93,8 @@ seconds</p>
 <h1>,,</h1>
 
 </div>
-<video autoplay>
-  <source src="../assets/videos/ch.mp4" type="video/mp4">
+<video autoplay muted >
+  <source src="/assets/videos/ch.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video></div>
 <div class="endoftimeline" style="height: 20vh;"></div>

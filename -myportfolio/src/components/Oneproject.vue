@@ -42,6 +42,9 @@ onMounted(()=>{
 
 
 })
+const getimg = (img : string)=> {
+    return "/assets/"+props.name+'/'+img
+}
 
 </script>
 
@@ -67,11 +70,11 @@ onMounted(()=>{
     </p></div>
 </div>
 <div class="photos_wrapper">
-    <img class="phone" src="../assets/Iphone.png" alt="uphone">
+    <img class="phone" :src="getimg('Iphone.png')" alt="uphone">
 
-    <img class="phone" src="../assets/Iphone.png" alt="uphone">
-    <img class="phone" src="../assets/Iphone.png" alt="uphone">
-    <img class="phone" src="../assets/Iphone.png" alt="uphone">
+    <img class="phone" :src="getimg('Iphone(1).png')" alt="uphone">
+    <img class="phone" :src="getimg('Iphone(2).png')" alt="uphone">
+    <img class="phone" :src="getimg('Iphone(3).png')" alt="uphone">
 
 </div>
 </div>
