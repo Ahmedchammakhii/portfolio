@@ -33,7 +33,7 @@ const projects=ref([{number:'01', name:"KAIZEN TN", description:" PORTFILO FOR A
    @font-face {
   font-family: "avenir";
   src: local("avenir"),
-   url(./fonts/avenir.ttf) format("truetype"); }
+   url(./fonts/Avenir.ttf) format("truetype"); }
 
 html{
   overflow-x: hidden;
