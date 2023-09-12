@@ -199,7 +199,7 @@ span{
     .photos_wrapper{
         position: absolute;
         left: 0;
-        transform: rotateX(50%); 
+        transform: rotateX(40%); 
 
     }
     .phone {
@@ -215,9 +215,7 @@ span{
         transform: scale(.4);
     }
     .photos_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+   
     row-gap: 60px;
     column-gap: 10px;
     

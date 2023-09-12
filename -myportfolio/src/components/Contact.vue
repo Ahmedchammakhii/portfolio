@@ -80,4 +80,16 @@ button {
     border-color: #333333;
     border-radius: 2rem 5rem;
 }
+@media screen and (max-width:600px) {
+    input , textarea{
+    width: 90%;
+  
+}
+button {
+    width: 90%;
+color: black;
+}
+
+}
+
 </style>
