@@ -12,6 +12,7 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 </script>
 
 <template>
+  <div class="main_app" style="overflow: hidden;">
 <Header></Header>
 <Aboutme></Aboutme>  
 <div class="projects" v-for="item in projects">
@@ -20,7 +21,7 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 <Skills></Skills>
 <ContactVue></ContactVue>
 <footer style="width: 100% ; display: flex ;align-items: center; justify-content: center;font-family: sanshaa;"><p>CHECK THE <a href="https://github.com/Ahmedchammakhii/portfolio" target="_blank">GITHUB REPO</a> </p> <img style="height: 20px;width: auto;margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></footer>
-</template>
+</div></template>
 <style>
 @font-face {
   font-family: "Valencia";
