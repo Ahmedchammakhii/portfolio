@@ -198,7 +198,7 @@ span{
     }
     .photos_wrapper{
         position: absolute;
-        left: 0;
+        left: -15%;
 
     }
     .phone {

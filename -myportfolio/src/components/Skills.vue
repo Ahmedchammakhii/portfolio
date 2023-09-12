@@ -161,7 +161,7 @@ margin-left: 100px;
         margin-left: 50px;
     }
     .set h2 {
-        font-size: calc(2rem + 1vw);
+        font-size: calc(1rem + .8vw);
     }
 }
 </style>
