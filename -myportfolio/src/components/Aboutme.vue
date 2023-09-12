@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap"
 gsap.registerPlugin(ScrollTrigger);
 
-const about = ref("Crafting user friendly and aesthetic website is not just a profession for me , it's my passion")
+const about = ref("Crafting user friendly and aesthetic websites is not just a profession for me , it's my passion")
 onMounted(() => {
     gsap.to("#transition", {
     x: '35%',

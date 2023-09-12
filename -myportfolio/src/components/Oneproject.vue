@@ -176,4 +176,20 @@ span{
     background-color: #090909;
     left: 0;
 }
+@media screen and (max-width:1200px) {
+    .phone {
+        transform: scale(.7);
+    }
+}
+@media screen and (max-width:900px) {
+    .wrapper {
+        position: relative;
+    }
+    .photos_wrapper{
+        position: absolute;
+        left: 0;
+        transform: rotateX(50%);
+    }
+
+}
 </style>
