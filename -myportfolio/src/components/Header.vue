@@ -17,6 +17,7 @@ h1 {
     font-family: Valencia;
     font-size: calc(6rem + 2vw);
     font-weight: 200;
+    text-align: center;
 }
 h3{
     font-family: sanshaa;   

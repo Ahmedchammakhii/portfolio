@@ -24,7 +24,7 @@ onMounted(()=>{gsap.to( `.project-${props.number} span`,{duration:1,   x:"100%" 
         
     }}) }
     else {
-        gsap.to (`.project-${props.number} .phone`,{y:"-60%", scale:.5,scrollTrigger : {
+        gsap.to (`.project-${props.number} .phone`,{y:"-60%", scale:.4,scrollTrigger : {
         trigger:`.project-${props.number}`,
         toggleActions: "play reverse play reverse",    
      scrub: true, 
@@ -198,7 +198,7 @@ span{
     }
     .photos_wrapper{
         position: absolute;
-        left: -15%;
+        left: -10%;
 
     }
     .phone {
