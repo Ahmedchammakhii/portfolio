@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const about = ref("Crafting user friendly and aesthetic websites is not just a profession for me , it's my passion")
 onMounted(() => {
+    if (window.innerWidth >= 600) {
     gsap.to("#transition", {
     x: '35%',
     scrollTrigger: {
@@ -20,6 +21,7 @@ else {return "bottom bottom"}},
       pin: true, 
     }
   });
+}
 });
 </script>
 

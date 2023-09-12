@@ -148,4 +148,15 @@ margin-left: 100px;
         transform: scale(.8);
     }
 }
+@media screen and (max-width:900px) {
+    video {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .right_quote {
+        display: none;
+    }
+}
 </style>
