@@ -143,5 +143,9 @@ video {
     transition: all ease 5s;
 margin-left: 100px;
 }
-
+@media screen and (max-width:1360px) {
+    video {
+        transform: scale(.8);
+    }
+}
 </style>

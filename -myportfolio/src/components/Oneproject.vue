@@ -188,7 +188,8 @@ span{
     .photos_wrapper{
         position: absolute;
         left: 0;
-        transform: rotateX(50%;
+        transform: rotateX(50%); 
+        
     }
 
 }
