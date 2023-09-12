@@ -5,9 +5,9 @@ import Header from './components/Header.vue'
 import Oneproject from './components/Oneproject.vue';
 import Skills from "./components/Skills.vue"
 import  ContactVue from './components/Contact.vue';
-const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DIGITAL COMPANY MADE WITHIN 2 DAYS"}
-, {number:'02', name:"5I", description:" SUPER-IINTERACTIVE WEBSITE BUILT FOR A BRANDING AGENCY"}
-,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS"}
+const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DIGITAL COMPANY MADE WITHIN 2 DAYS",link:"https://kaizen-blue.vercel.app/"}
+, {number:'02', name:"5I", description:" SUPER-IINTERACTIVE WEBSITE BUILT FOR A BRANDING AGENCY",link:"https://5i.vercel.app/"}
+,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS",link:"https://afrah-eta.vercel.app/"}
 ])
 </script>
 
@@ -16,7 +16,7 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 <Header></Header>
 <Aboutme></Aboutme>  
 <div class="projects" v-for="item in projects">
-<Oneproject :number=item.number :name=item.name :description=item.description></Oneproject>
+<Oneproject :number=item.number :name=item.name :description=item.description :link=item.link></Oneproject>
 </div>
 <Skills></Skills>
 <ContactVue></ContactVue>

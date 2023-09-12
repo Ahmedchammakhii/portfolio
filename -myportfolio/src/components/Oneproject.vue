@@ -4,6 +4,7 @@ const props = defineProps<{
   number: string;
   name: string;
   description: string;
+  link:string;
 }>();
 
 import { onMounted, ref } from 'vue';
@@ -67,7 +68,7 @@ const getimg = (img : string)=> {
 <div class="wrapper">
 <div class="content_wrapper">
     <div class="title">
-       <p class="parag">{{name}} <span></span></p>  
+     <a :href=link target="_blank">  <p class="parag">{{name}} <span></span></p></a>  
     </div>
     <div class="tags">
         <div class="dot"></div>
@@ -178,6 +179,11 @@ p {
 .description p {
     max-width: 90%;
 
+}
+a {
+    text-decoration: none;
+    color:#333333;
+;
 }
 span{
     position: absolute;
