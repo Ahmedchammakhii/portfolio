@@ -160,5 +160,8 @@ margin-left: 100px;
     .right{
         margin-left: 50px;
     }
+    .set h2 {
+        font-size: calc(2rem + 1vw);
+    }
 }
 </style>
