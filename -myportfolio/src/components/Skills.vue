@@ -5,7 +5,6 @@ import gsap from "gsap"
 const train = ref("<Training>")
     onMounted(()=>{
 const timeline = gsap.timeline()
-
 timeline.to("video",{scale:10,scrollTrigger:{
     trigger:".endoftimeline",
     end:"bottom bottom",
@@ -118,7 +117,7 @@ align-items: center;
 opacity: 0;
 }
 h1 {
-    font-size: calc(4rem + 1vw);
+    font-size: calc(3rem + 1vw);
 }
 .right_quote p {
     font-size: calc(2rem + 1vw);
@@ -157,6 +156,9 @@ margin-left: 100px;
 @media screen and (max-width:600px) {
     .right_quote {
         display: none;
+    }
+    .right{
+        margin-left: 50px;
     }
 }
 </style>

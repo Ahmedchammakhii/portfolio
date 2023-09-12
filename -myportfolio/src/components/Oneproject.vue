@@ -10,17 +10,28 @@ import { onMounted, ref } from 'vue';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap"
 gsap.registerPlugin(ScrollTrigger);
-onMounted(()=>{
-    gsap.to( `.project-${props.number} span`,{duration:1,   x:"100%" , delay:.5 ,scrollTrigger : {
+onMounted(()=>{gsap.to( `.project-${props.number} span`,{duration:1,   x:"100%" , delay:.5 ,scrollTrigger : {
         trigger:`.project-${props.number}`,  toggleActions: "play reverse play reverse",
     }} )
+    if(window.innerWidth>600)
+{
+    
     gsap.to (`.project-${props.number} .phone`,{y:"-40%", scale:1.1,scrollTrigger : {
         trigger:`.project-${props.number}`,
         toggleActions: "play reverse play reverse",    
      scrub: true, 
         
         
+    }}) }
+    else {
+        gsap.to (`.project-${props.number} .phone`,{y:"-40%", scale:.5,scrollTrigger : {
+        trigger:`.project-${props.number}`,
+        toggleActions: "play reverse play reverse",    
+     scrub: true, 
+        
+        
     }})
+    }
     const effect = gsap.to(`.project-${props.number}`, {
         opacity: 0.7,
         y:"-15%",
@@ -203,6 +214,13 @@ span{
     .phone {
         transform: scale(.4);
     }
+    .photos_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 60px;
+    
+}
 }
 
 </style>
