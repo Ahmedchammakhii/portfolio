@@ -189,8 +189,20 @@ span{
         position: absolute;
         left: 0;
         transform: rotateX(50%); 
-        
+
+    }
+    .phone {
+        transform: scale(.5);
     }
 
 }
+@media screen and (max-width:600px) {
+    video {
+        display: none;
+    }
+    .phone {
+        transform: scale(.4);
+    }
+}
+
 </style>
