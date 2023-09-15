@@ -32,7 +32,6 @@ display.value=!display.value      })
 <template>
     <address class="content_wrapper__contact">
 <h1>{{ "<"+contactTag+">" }}</h1>
-<p>THIS WEBSITE IS CREATED TO ONLY APPLY FOR THE JOB SUBMITTED BY <a href="https://tanitjobs.com/job/1355515/d%C3%A9veloppeur-front-end-vue-js/?backPage=&searchID=1693557052.2987" target="_blank"> FANPRIME </a> </p>
 <p>Feel free to send an e-mail on Ahmedchammakhi2@gmail.com Or to Contact me on +21698648548</p>
 <form v-if="display==true" @submit.prevent="submitForm">
     <label for="name">Name:</label>
@@ -50,6 +49,7 @@ display.value=!display.value      })
 <h1 >{{ "<"+contactTag+"/>" }}</h1>
 
     </address>
+    
 </template>
 <style scoped>
 

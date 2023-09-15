@@ -64,7 +64,7 @@ gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
 </h2>
 <h2>ASTRO</h2>
 <h2>NEXT JS</h2>
-<h2>VUE JS *Thanks to fanprime*</h2>
+<h2>VUE JS</h2>
 <h2>NODE JS</h2>
     </div>
     <div class="set">

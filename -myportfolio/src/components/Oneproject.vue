@@ -202,17 +202,19 @@ span{
     .wrapper {
         position: relative;
     }
+    .phone {
+        transform: scale(.5);
+    }
+    
+
+}
+@media screen and (max-width:600px) {
     .photos_wrapper{
         position: absolute;
         left: -10%;
 
     }
-    .phone {
-        transform: scale(.5);
-    }
 
-}
-@media screen and (max-width:600px) {
     video {
         display: none;
     }

@@ -43,5 +43,21 @@ h1,h3{
   padding: 0;
   margin: 0;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 2rem 4rem;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
 </style>
 
