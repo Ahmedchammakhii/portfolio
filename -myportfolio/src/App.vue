@@ -16,9 +16,10 @@ const istrue = ref(false)
 onMounted(()=>{
   window.addEventListener('load', function () {
   const loader = document.getElementById('loader');
-    istrue.value = true
-
-  if (loader) gsap.to(".loader",{y:"-1000vh",transition:"all ease .1s",duration:1}).then(()=>loader.style.display = "none")
+  const interval = setTimeout(() => {
+  istrue.value = true
+}, 4500);
+  if (loader && istrue) gsap.to(".loader",{y:"-1000vh",transition:"all ease .1s",duration:1}).then(()=>loader.style.display = "none")
 });
 
 })
