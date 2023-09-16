@@ -2,16 +2,17 @@
 import { onMounted,onBeforeMount, ref } from 'vue';
 import gsap from "gsap"
 
+const props = defineProps<{
+  istrue : boolean
+}>();
 onMounted (()=> {
     var button = document.getElementById("play-pause-button") ;
 const loader = document.querySelector(".loader") as HTMLElement | null;
 gsap.to(".loading-bar",{width:"100%",duration:4 }
-).then(()=>gsap.to(".loader",{y:"-100vh",transition:"all ease .1s",duration:1,  onComplete: () => {if (loader) loader.style.display = "none";
-  }}))
+)
 
 
 })
-
 const doplay = ()=> {
     var audio = document.getElementById("myAudio") as HTMLAudioElement;
 return audio.play()
@@ -19,7 +20,7 @@ return audio.play()
 </script>
 
 <template>
-<section class="loader" style="background: url('/assets/Pieter.webp') no-repeat ;width: 100vw; height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;position: absolute;top: 0;">
+<section class="loader" v-if="istrue == false" style="background: url('/assets/Pieter.webp') no-repeat ;width: 100vw; height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;position: absolute;top: 0;">
 <h1 >What about a lil bit of nostalgia while loading ressources ? </h1>
 <div class="loading-bar-container">
         <div class="loading-bar"></div>

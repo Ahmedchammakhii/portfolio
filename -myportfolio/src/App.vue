@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
 import Aboutme from './components/Aboutme.vue';
 import Header from './components/Header.vue'
 import Oneproject from './components/Oneproject.vue';
@@ -11,13 +12,20 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 ,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS",link:"https://afrah-eta.vercel.app/"}
 ])
 const istrue = ref(false)
-const interval = setTimeout(() => {
-  istrue.value = true
-}, 4200);
+
+onMounted(()=>{
+  window.addEventListener('load', function () {
+  const loader = document.getElementById('loader');
+    istrue.value = true
+
+  if (loader) gsap.to(".loader",{y:"-1000vh",transition:"all ease .1s",duration:1}).then(()=>loader.style.display = "none")
+});
+
+})
 </script>
 
 <template>
-    <Loader></Loader>  <div v-if="istrue.valueOf()" class="main_app" style="overflow: hidden;">
+    <Loader :istrue="istrue.valueOf()"></Loader>  <div v-if="istrue.valueOf()" class="main_app" style="overflow: hidden;">
 
 <Header></Header>
 <Aboutme></Aboutme>  
