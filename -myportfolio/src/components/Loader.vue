@@ -4,9 +4,9 @@ import gsap from "gsap"
 
 onMounted (()=> {
     var button = document.getElementById("play-pause-button") ;
-
+const loader = document.querySelector(".loader") as HTMLElement | null;
 gsap.to(".loading-bar",{width:"100%",duration:4 }
-).then(()=>gsap.to(".loader",{y:"-100vh",transition:"all ease .1s",duration:1,  onComplete: () => {document.querySelector(".loader").style.display = "none";
+).then(()=>gsap.to(".loader",{y:"-100vh",transition:"all ease .1s",duration:1,  onComplete: () => {if (loader) loader.style.display = "none";
   }}))
 
 

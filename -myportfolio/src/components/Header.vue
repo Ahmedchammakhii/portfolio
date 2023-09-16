@@ -37,7 +37,7 @@ const thescreen = ()=>{
     <h3 >FULL STACK DEVELOPER </h3>
     <div class="tv_wrapper" style="width: 100vw; height: 100vh;position: absolute;    background: url('/assets/back.webp') no-repeat ;
     background-position:center ;
-    filter: brightness(200%);
+    filter: brightness(200%) grayscale(40%);
    
     display: flex;
     justify-content: center;
