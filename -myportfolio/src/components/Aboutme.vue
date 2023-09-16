@@ -64,7 +64,7 @@ p{
     left: 5%;
 }
 .right {
-    padding-top: 80px;
+    transform: translateY(70px) 
 }
 .right p {
     font-family: sanshaa;   
