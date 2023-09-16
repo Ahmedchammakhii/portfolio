@@ -18,7 +18,7 @@ onMounted(()=>{
   const loader = document.getElementById('loader');
   const interval = setTimeout(() => {
   istrue.value = true
-}, 4500);
+}, 5500);
   if (loader && istrue) gsap.to(".loader",{y:"-1000vh",transition:"all ease .1s",duration:1}).then(()=>loader.style.display = "none")
 });
 

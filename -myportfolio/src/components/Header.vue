@@ -61,7 +61,7 @@ const thescreen = ()=>{
 
 h1 {
     font-family: Valencia;
-    font-size: calc(5rem + 2vw);
+    font-size: calc(5.5rem + 2vw);
     font-weight: 200;
     text-align: center;
     z-index: 10;
