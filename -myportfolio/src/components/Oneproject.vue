@@ -99,7 +99,7 @@ const getimg = (img : string)=> {
 article {
 
     width: 80vw;
-    height: 120vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 font-family: avenir;

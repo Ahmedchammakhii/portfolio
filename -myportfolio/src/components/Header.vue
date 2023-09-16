@@ -11,6 +11,7 @@ onMounted(()=>{
   }, 1500);
   gsap.from(".greetings h1",{y:250,scale:.5,zIndex:-1,opacity:0,})
   gsap.from(".greetings h3",{y:250,scale:.5,delay:.5,zIndex:-1,opacity:0})
+  gsap.from(".greetings",{y:1000})
 
 gsap.to(".greetings",{ rotate:"40%",scale:10,opacity:0,transformOrigin:"center 70%"
 ,scrollTrigger:{
@@ -20,7 +21,6 @@ gsap.to(".greetings",{ rotate:"40%",scale:10,opacity:0,transformOrigin:"center 7
 }})
 
 })
-
 onUnmounted (()=> clearInterval(interval))
 
 const thescreen = ()=>{ 
@@ -34,7 +34,7 @@ const thescreen = ()=>{
     <h3 >FULL STACK DEVELOPER </h3>
     <div class="tv_wrapper" style="width: 100vw; height: 100vh;position: absolute;    background: url('/assets/back.webp') no-repeat ;
     background-position:center ;
-    filter: brightness(200%) grayscale(40%);
+    filter: brightness(200%);
    
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@ const thescreen = ()=>{
 
 h1 {
     font-family: Valencia;
-    font-size: calc(5.5rem + 2vw);
+    font-size: calc(6rem + 2vw);
     font-weight: 200;
     text-align: center;
     z-index: 10;
