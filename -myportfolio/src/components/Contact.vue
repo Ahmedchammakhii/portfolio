@@ -65,7 +65,7 @@ display.value=!display.value      })
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 input , textarea{
     width: 40%;

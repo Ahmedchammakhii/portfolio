@@ -5,14 +5,20 @@ import Header from './components/Header.vue'
 import Oneproject from './components/Oneproject.vue';
 import Skills from "./components/Skills.vue"
 import  ContactVue from './components/Contact.vue';
-const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DIGITAL COMPANY MADE WITHIN 2 DAYS",link:"https://kaizen-blue.vercel.app/"}
+import Loader from './components/Loader.vue';
+const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DIGITAL COMPANY MADE WITHIN 2 DAYS : EXPLORE THIS SHOWCASE OF RAPID INNOVATION, WHERE SPEED AND QUALITY CONVERGE TO BRING YOUR DIGITAL VISIONS TO LIFE WITH REMARKABLE EFFICIENCY.",link:"https://kaizen-blue.vercel.app/"}
 , {number:'02', name:"5I", description:" SUPER-IINTERACTIVE WEBSITE BUILT FOR A BRANDING AGENCY",link:"https://5i.vercel.app/"}
 ,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS",link:"https://afrah-eta.vercel.app/"}
 ])
+const istrue = ref(false)
+const interval = setTimeout(() => {
+  istrue.value = true
+}, 4200);
 </script>
 
 <template>
-  <div class="main_app" style="overflow: hidden;">
+    <Loader></Loader>  <div v-if="istrue.valueOf()" class="main_app" style="overflow: hidden;">
+
 <Header></Header>
 <Aboutme></Aboutme>  
 <div class="projects" v-for="item in projects">
@@ -39,7 +45,11 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 html{
   overflow-x: hidden;
 }
-h1,h3{
+*{
+  padding: 0;
+  margin: 0;
+}
+:root {
   padding: 0;
   margin: 0;
 }

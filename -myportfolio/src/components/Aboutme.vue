@@ -57,11 +57,14 @@ p{
     opacity: .1;
 
 }
+#main_container {
+    padding-top: 100px;
+}
 #transition {
     left: 5%;
 }
 .right {
-    padding-top: 210px;
+    padding-top: 80px;
 }
 .right p {
     font-family: sanshaa;   
