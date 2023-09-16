@@ -58,13 +58,13 @@ p{
 
 }
 #main_container {
-    padding-top: 100px;
+    transform: translateY(100px) 
 }
 #transition {
     left: 5%;
 }
 .right {
-    transform: translateY(70px) 
+    padding-top: 80px;
 }
 .right p {
     font-family: sanshaa;   
