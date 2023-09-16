@@ -13,20 +13,10 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 ])
 const istrue = ref(false)
 
-onMounted(()=>{
-  window.addEventListener('load', function () {
-  const loader = document.getElementById('loader');
-  const interval = setTimeout(() => {
-  istrue.value = true
-}, 5500);
-  if (loader && istrue) gsap.to(".loader",{y:"-1000vh",transition:"all ease .1s",duration:1}).then(()=>loader.style.display = "none")
-});
-
-})
 </script>
 
 <template>
-    <Loader :istrue="istrue.valueOf()"></Loader>  <div v-if="istrue.valueOf()" class="main_app" style="overflow: hidden;">
+     <div  class="main_app" style="overflow: hidden;">
 
 <Header></Header>
 <Aboutme></Aboutme>  

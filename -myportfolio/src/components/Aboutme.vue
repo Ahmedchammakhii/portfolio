@@ -58,7 +58,7 @@ p{
 
 }
 #main_container {
-    transform: translateY(100px) 
+    padding-top: 100px;
 }
 #transition {
     left: 5%;

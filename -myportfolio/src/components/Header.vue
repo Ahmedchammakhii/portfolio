@@ -20,9 +20,6 @@ gsap.to(".greetings",{ rotate:"40%",scale:10,opacity:0,transformOrigin:"center 7
 }})
 
 })
-const interval2 = setTimeout(() => {
-gsap.from(".greetings",{ y:500 })
-},50);
 
 onUnmounted (()=> clearInterval(interval))
 

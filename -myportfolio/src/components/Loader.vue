@@ -47,7 +47,7 @@ return audio.play()
 </section>
 
 </template>
-<style >
+<style scoped >
 
 .loader {
     color: white ;
