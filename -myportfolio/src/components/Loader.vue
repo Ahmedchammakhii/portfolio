@@ -19,13 +19,13 @@ return audio.play()
 </script>
 
 <template>
-<section class="loader" style="background: url('https://www.artnews.com/wp-content/uploads/2023/03/Pieter_BRUEGHEL_Ii_-_The_tax-collectors_office_-_Google_Art_Project.jpg?w=1920') no-repeat ;width: 100vw; height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;position: absolute;top: 0;">
+<section class="loader" style="background: url('/assets/Pieter.webp') no-repeat ;width: 100vw; height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;position: absolute;top: 0;">
 <h1 >What about a lil bit of nostalgia while loading ressources ? </h1>
 <div class="loading-bar-container">
         <div class="loading-bar"></div>
     </div> 
 
-<img id="mediaplayer" src="https://www.apeaksoft.com/images/solution/windows-media-player-10.jpg" alt="Windows player">
+<img id="mediaplayer" src="/assets/windows-media-player-10.jpg" alt="Windows player">
 <video id="loadervideo" style="position: absolute;scale: .25;transform: translateY(90px);" autoplay muted src="https://r4---sn-4g5lzned.googlevideo.com/videoplayback?expire=1694826784&ei=wKwEZc_7EIqt_9EPjdaO0Ac&ip=2607%3A5300%3A60%3A61a5%3Aae07%3A356d%3Aa2e0%3A18e3&id=o-AF9bfsC1ojphJ0deIVdm52SjDIJJaLxgs8c9Q-zMBhSj&itag=22&source=youtube&requiressl=yes&spc=UWF9f7B9vkT1MtPY2QjHr3jaS6Qbv28&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=213.159&lmt=1687451967600849&fexp=24007246,24350018,24350026&beids=24350018&c=ANDROID&txp=6211224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgQvbDh5fOXGBEtizg-qCFvI2D5G2pfBfRjxYBTL-dxxACIDF0V0p9Y8zuTsqHJEZe81o04eChp_yvfrqOvKdwjQK3&cm2rm=sn-bavc5aoxuuo-u0ol7e,sn-4g5e6z7e&req_id=3c018778d63a3ee&redirect_counter=2&cms_redirect=yes&cmsv=e&mh=zW&mip=197.26.60.153&mm=34&mn=sn-4g5lzned&ms=ltu&mt=1694804966&mv=m&mvi=4&pl=21&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAJHBivAgXLB6yUdeNjJJzCtoTb0c6k0ZoJNO85mSA6zwAiA-0lfFWC692XmD7ys47XoeP7qwH-6-wHVRNqsWYpJVJQ%3D%3D"></video>
 <audio style="transform: translateY(-80px) translateX(-120px);"  id="myAudio"  >
         <source src="/assets/mydream.mp3" type="audio/mpeg">
