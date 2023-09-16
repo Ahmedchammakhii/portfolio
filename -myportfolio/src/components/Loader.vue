@@ -36,7 +36,20 @@ return audio.play()
 </section>
 
 </template>
-<style scoped>
+<style >
+@font-face {
+  font-family: "Valencia";
+  src: local("Valencia"),
+   url(./fonts/Valencia.ttf) format("truetype"); }
+   @font-face {
+  font-family: "sanshaa";
+  src: local("sanshaa"),
+   url(./fonts/sansha.ttf) format("truetype"); }
+   @font-face {
+  font-family: "avenir";
+  src: local("avenir"),
+   url(./fonts/Avenir.ttf) format("truetype"); }
+
 .loader {
     color: white ;
     font-family: sanshaa;
@@ -45,8 +58,7 @@ return audio.play()
     text-align: center;
 
 }
-h1 {
-}
+
 #mediaplayer {
 transform: scale(.9);
 }
@@ -66,7 +78,7 @@ transform: scale(.9);
             transition: width 0.5s ease-in-out;
         }
 @media screen and (max-width:650px) {
-    h1 {
+    .loader h1 {
     position: relative;
     font-size: calc(.8rem + 1vw);
 
