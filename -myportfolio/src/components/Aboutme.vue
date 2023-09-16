@@ -43,13 +43,16 @@ article {
     height: 100vh;
     display: flex;
     position: relative;
-
 }
 .left {
+    margin-top: 100px;
+
     width: 35%;
 
 }
 p{
+    margin-top: 100px;
+
     font-family: avenir;   
     font-size: calc(5rem + 5vw);
     position: absolute;
