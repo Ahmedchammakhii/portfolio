@@ -67,7 +67,7 @@ return audio.play()
   width: 20px;
   height: 20px;
   border-radius: 70px 70px 0 0;
-  margin: 10% auto;
+  margin: 0 auto;
   z-index: 1;
   
   animation: move 5s ease infinite;
