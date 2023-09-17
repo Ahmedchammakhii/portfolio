@@ -100,6 +100,7 @@ z-index: 50000;
   display: flex;
   justify-content: flex-end;
 }
+
 .main_faq::before {
   width: 120%;
   content: "";
@@ -181,7 +182,9 @@ transform: scale(.7);
     }
 .sbou3i {
   scale: .5;
-  top: 5%;
+  top: -4%;
+  transform: translateX(-20%) !important ;
+  opacity: .8;
 }
      #mediaplayer {
 transform: scale(.6) translateX(-30%)  !important;
