@@ -38,7 +38,7 @@ else {lastfaq.value = !lastfaq.value ;
 <div class="bg__faq"></div>
 <div class="sbou3i" >
 </div>
-<h1 style="padding-bottom: 100px;"></h1>
+<h1 style="padding-bottom: 40px">{{ "<FAQ>" }}</h1>
 <div class="all_faqs" v-for="(onefaq,i) of faq">
 <div class="main_faq" @click="show(i)" >
 <div class="onefaq" >
@@ -49,7 +49,7 @@ else {lastfaq.value = !lastfaq.value ;
 <div class="resp" ><h4 v-if="onefaq.showed === true">{{onefaq.desc}}</h4></div>
 </div>
 </div>
-<div class="main_faq" @click="show(5)" >
+<div class="main_faq" style="border-bottom: 5px solid black;" @click="show(5)" >
 <div class="onefaq" >
   <h1>05.</h1>
 <h1 class="qst">HMED , so that's it , no MORE SURPRISES ?</h1>
@@ -63,6 +63,7 @@ else {lastfaq.value = !lastfaq.value ;
 <audio id="myAudio"  >
         <source src="/assets/mydream.mp3" >
     </audio>
+    <h1 style="padding-top: 40px">{{ "<FAQ>" }}</h1>
 
 </section>
 
