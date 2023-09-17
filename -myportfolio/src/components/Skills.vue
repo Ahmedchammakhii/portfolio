@@ -146,7 +146,7 @@ opacity: 0;
     width: max-content;
     height: max-content;
     color: white;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     margin-right: 5px
 }
 h1 {
@@ -208,9 +208,9 @@ margin-right: 0;}
     video {
         display: none;
     }
-    .left{
+    .right{
         background: url("/assets/videos/ch.mp4") no-repeat;
-        background-size:contain;
+        background-size:cover;
     }
 }
 @media screen and (max-width:400px) {
@@ -218,6 +218,11 @@ margin-right: 0;}
     .set h2 {
         font-size: calc(1.3rem + .2vw);
     }
+}
+@media screen and (max-height:400px) {
+.content_wrapper__skills {
+    height: 80vh;
+}
 }
 
 </style>
