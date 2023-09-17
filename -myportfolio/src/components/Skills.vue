@@ -5,11 +5,6 @@ import gsap from "gsap"
 const train = ref("<Training>")
     onMounted(()=>{
 const timeline = gsap.timeline()
-timeline.to("video",{scale:10,scrollTrigger:{
-    trigger:".endoftimeline",
-    end:"bottom bottom",
-    scrub:true
-}})
 timeline.to(".right_quote",{
     opacity:0,scrollTrigger:{
     trigger:".endoftimeline",
@@ -24,7 +19,13 @@ timeline.to(".right_quote",{
 
     scrub:true,
 }
-},"+=15")
+},"+=15").to(".right2",{ opacity: 1,scrollTrigger:{
+    trigger:".endoftimeline",
+    end:"bottom bottom",
+
+    scrub:true,
+}
+})
 gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
         trigger:".content_wrapper__contact"
         , start:"top 70%",
@@ -56,7 +57,7 @@ gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
     <h2>{{ '</' + train.slice(1)  }}</h2>
 
 </div>
-<div class="right" >
+<div class="right"  >
     <div class="set">
         <h2>HTML & CSS
 </h2>
@@ -82,17 +83,34 @@ gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
         <h2>After effect</h2>
     </div>
 </div>
-<div class="right_quote" >
-    <h1>,,</h1>
-    <p>Majority of people can
-run a 100meter dash,
-but only a dozen can
-do it in under 9.8
-seconds</p>
-<h1>,,</h1>
+<div class="right2" >
+    <div class="set">
+        <h2>HTML & CSS
+</h2>
+<h2>React
+</h2>
+<h2>ASTRO</h2>
+<h2>NEXT JS</h2>
+<h2>VUE JS</h2>
+<h2>NODE JS</h2>
+    </div>
+    <div class="set">
+        <h2>Project Management
 
+</h2>
+<h2>Visual Communication
+</h2>
+<h2>Concept development</h2>
+
+    </div>
+    <div class="set">
+        <h2>Figma</h2>
+        <h2>Photoshop</h2>
+        <h2>After effect</h2>
+    </div>
 </div>
-<video autoplay muted >
+
+<video autoplay muted loop >
   <source src="/assets/videos/ch.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video></div>
@@ -100,21 +118,35 @@ seconds</p>
 </template>
 <style scoped>
 .content_wrapper__skills {
-    width: 90vw;
+    width: 100vw;
     height: 60vh;
     display: flex;
 font-family: avenir;
 padding-left: 5%;
 align-items: center;
+overflow: hidden;
 }
 .left {
-    width: 50%;
+    width: 30%;
 }
-.right {
+.right ,.right2{
     display: flex;
     flex-direction: column;
     gap: 20px;
 opacity: 0;
+
+
+}
+.right2 {
+    transform: scaleX(-1) 
+}
+.right h2 , .right2 h2 {
+    background-color: black;
+    width: max-content;
+    height: max-content;
+    color: white;
+    margin-bottom: 2px;
+    margin-right: 5px
 }
 h1 {
     font-size: calc(3rem + 1vw);
@@ -135,12 +167,17 @@ text-align: center;
     justify-content: flex-end;
 }
 video {
-    width: 150px;
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     transition: all ease 5s;
 margin-left: 100px;
+position: absolute;
+right: 0;
+scale: 8;
+overflow: hidden;
+opacity: .8;
 }
 @media screen and (max-width:1360px) {
     video {
@@ -149,8 +186,13 @@ margin-left: 100px;
 }
 @media screen and (max-width:900px) {
     video {
-        display: none;
-    }
+       z-index: -1;
+opacity: .5;    }
+.right2,.right{
+    scale: .7;
+}
+.right2 h2,.right h2{
+margin-right: 0;}
 }
 
 @media screen and (max-width:600px) {
@@ -161,7 +203,14 @@ margin-left: 100px;
         margin-left: 50px;
     }
     .set h2 {
-        font-size: calc(1rem + .8vw);
+        font-size: calc(1rem + 1.8vw);
     }
 }
+@media screen and (max-width:400px) {
+
+    .set h2 {
+        font-size: calc(1rem + .2vw);
+    }
+}
+
 </style>
