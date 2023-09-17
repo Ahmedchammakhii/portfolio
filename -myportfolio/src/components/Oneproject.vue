@@ -25,7 +25,7 @@ onMounted(()=>{gsap.to( `.project-${props.number} span`,{duration:1,   x:"100%" 
         
     }}) }
     else {
-        gsap.to (`.project-${props.number} .phone`,{y:"-65%",x:"-20%", scale:.5,scrollTrigger : {
+        gsap.to (`.project-${props.number} .phone`,{y:"-65%",x:"-5%", scale:.5,scrollTrigger : {
         trigger:`.project-${props.number}`,
         toggleActions: "play reverse play reverse",    
      scrub: true, 

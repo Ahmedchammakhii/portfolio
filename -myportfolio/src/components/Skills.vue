@@ -138,7 +138,8 @@ opacity: 0;
 
 }
 .right2 {
-    transform: scaleX(-1) 
+    transform: scaleX(-1) ;
+    z-index: 100;
 }
 .right h2 , .right2 h2 {
     background-color: black;
@@ -170,7 +171,6 @@ video {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    object-fit: cover;
     transition: all ease 5s;
 margin-left: 100px;
 position: absolute;
@@ -205,11 +205,18 @@ margin-right: 0;}
     .set h2 {
         font-size: calc(1rem + 1.8vw);
     }
+    video {
+        display: none;
+    }
+    .left{
+        background: url("/assets/videos/ch.mp4") no-repeat;
+        background-size:contain;
+    }
 }
 @media screen and (max-width:400px) {
 
     .set h2 {
-        font-size: calc(1rem + .2vw);
+        font-size: calc(1.3rem + .2vw);
     }
 }
 

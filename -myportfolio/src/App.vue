@@ -46,6 +46,7 @@ html{
 :root {
   padding: 0;
   margin: 0;
+  
 }
 h1,h3{
   padding: 0;
