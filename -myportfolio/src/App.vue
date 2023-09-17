@@ -5,6 +5,7 @@ import Header from './components/Header.vue'
 import Oneproject from './components/Oneproject.vue';
 import Skills from "./components/Skills.vue"
 import  ContactVue from './components/Contact.vue';
+import Faq from './components/Faq.vue';
 const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DIGITAL COMPANY MADE WITHIN 2 DAYS",link:"https://kaizen-blue.vercel.app/"}
 , {number:'02', name:"5I", description:" SUPER-IINTERACTIVE WEBSITE BUILT FOR A BRANDING AGENCY",link:"https://5i.vercel.app/"}
 ,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS",link:"https://afrah-eta.vercel.app/"}
@@ -19,6 +20,7 @@ const projects=ref([{number:'01', name:"KAIZEN", description:" PORTFILO FOR A DI
 <Oneproject :number=item.number :name=item.name :description=item.description :link=item.link></Oneproject>
 </div>
 <Skills></Skills>
+<Faq></Faq>
 <ContactVue></ContactVue>
 <footer style="width: 100% ; display: flex ;align-items: center; justify-content: center;font-family: sanshaa;"><p>CHECK THE <a href="https://github.com/Ahmedchammakhii/portfolio" target="_blank">GITHUB REPO</a> </p> <img style="height: 20px;width: auto;margin-left: 10px;" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></footer>
 </div></template>

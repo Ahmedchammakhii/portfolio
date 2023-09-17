@@ -196,6 +196,7 @@ right: 0;
 scale: 8;
 overflow: hidden;
 opacity: .8;
+
 }
 @media screen and (max-width:1360px) {
     video {
