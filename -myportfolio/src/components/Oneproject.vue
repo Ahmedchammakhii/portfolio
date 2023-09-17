@@ -208,6 +208,13 @@ span{
     
 
 }
+@media screen and (max-width:790px) and (min-width: 700px) {
+    .photos_wrapper{
+scale: .6;
+    }
+
+}
+
 @media screen and (max-width:600px) {
     .photos_wrapper{
         position: absolute;
