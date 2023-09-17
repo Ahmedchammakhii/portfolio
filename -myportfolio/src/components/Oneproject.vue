@@ -12,20 +12,20 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap"
 gsap.registerPlugin(ScrollTrigger);
 onMounted(()=>{gsap.to( `.project-${props.number} span`,{duration:1,   x:"100%" , delay:.5 ,scrollTrigger : {
-        trigger:`.project-${props.number}`,  toggleActions: "play reverse play reverse",
+        trigger:`.project-${props.number} .tags`,  toggleActions: "play reverse play reverse",
     }} )
     if(window.innerWidth>600)
 {
     
     gsap.to (`.project-${props.number} .phone`,{y:"-40%", scale:1.1,scrollTrigger : {
-        trigger:`.project-${props.number}`,
+        trigger:`.project-${props.number} .tags`,
         toggleActions: "play reverse play reverse",    
      scrub: true, 
         
         
     }}) }
     else {
-        gsap.to (`.project-${props.number} .phone`,{y:"-65%",x:"-5%", scale:.5,scrollTrigger : {
+        gsap.to (`.project-${props.number} .phone`,{y:"-85%",x:"-5%", scale:.5,scrollTrigger : {
         trigger:`.project-${props.number}`,
         toggleActions: "play reverse play reverse",    
      scrub: true, 
@@ -81,14 +81,14 @@ const getimg = (img : string)=> {
        <p class="parag">{{description}} <span></span>
     </p></div>
 </div>
-<div class="photos_wrapper">
+<a :href=link target="_blank"> <div class="photos_wrapper">
     <img class="phone" :src="getimg('Iphone.png')" alt="uphone">
 
     <img class="phone" :src="getimg('Iphone(1).png')" alt="uphone">
     <img class="phone" :src="getimg('Iphone(2).png')" alt="uphone">
     <img class="phone" :src="getimg('Iphone(3).png')" alt="uphone">
 
-</div>
+</div></a>
 </div>
 <div class="end" style="height: 30vh;"></div>
 </article><div :class="'end-'+number" style="margin-bottom: 30vh;"></div>
@@ -112,10 +112,11 @@ padding: 0 5%;
 .title {
     color:#333333;
     font-size: calc(5rem + 2vw);
+    
 }
 .content_wrapper {
     display: flex;
-    flex-direction: column;   justify-content: flex-end;
+    flex-direction: column;   justify-content: center;
 gap: 20px;
     height: 80%;
     width: 70%;
