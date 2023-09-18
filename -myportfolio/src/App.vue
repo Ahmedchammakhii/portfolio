@@ -21,7 +21,6 @@ if (counterH1) { c++;
  if (c>3) { counterH1.innerHTML = counterH1.innerHTML.slice(0,counterH1.innerHTML.length-3) ; c=0}
  else counterH1.innerHTML = counterH1.innerHTML + "." ;
   time++
-console.log(time);
 if (time == 13) {
    clearInterval (interval) ;
 gsap.to(".loader",{y:"-100%",duration:1})
@@ -108,7 +107,7 @@ h1,h3{
   height: 100%;
   min-height: 500vh;
   background-color: #000000;
-  z-index: 1000;position:absolute ;
+  z-index: 1000;position:fixed ;
   top: 0;
 }
 .container_load{
