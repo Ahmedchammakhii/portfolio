@@ -58,7 +58,7 @@ else {lastfaq.value = !lastfaq.value ;
 </div>
 <div class="resp" v-if="lastfaq.valueOf() === true" >
 <img id="mediaplayer" src="/assets/windows-media-player-10.jpg" alt="Windows player">
-<h2 style="color: rgb(255, 255, 255);position: absolute;">WHAT ABOUT A LIL BIT OF NOSTALGIAAA ? VOLUMEEE UP</h2>
+<h2 style="color: rgb(255, 255, 255);position: absolute;top:10%;width: 100%">A LIL BIT OF NOSTALGIAAA ? VOLUMEEE UP</h2>
 <iframe src="//gifs.com/embed/windows-media-player-visualizations-oVrvEN" frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
 </div>
 </div></div>
@@ -218,7 +218,7 @@ transform: scale(.6) translateX(-30%)  !important;
 }
 @media screen and (max-width:650px) {
      #mediaplayer {
-transform: scale(.45);
+transform: scale(.7) !important;
 }
 #loadervideo {
     transform: scale(.1) translateY(110px) !important;
