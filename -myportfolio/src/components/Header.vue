@@ -12,14 +12,14 @@ onMounted(()=>{
   gsap.from(".greetings h1",{y:250,scale:.5,zIndex:-1,opacity:0,})
   gsap.from(".greetings h3",{y:250,scale:.5,delay:.5,zIndex:-1,opacity:0})
   gsap.from(".greetings",{y:1000})
-if (window.innerHeight > window.innerWidth && window.innerHeight>=1024) gsap.to(".greetings",{ rotate:"40%",scale:9,opacity:0,transformOrigin:"center 60%"
+if (window.innerHeight > window.innerWidth && window.innerHeight>=1024) gsap.to(".greetings",{ transform:"rotate(40%) scale(9)",opacity:0,transformOrigin:"center 60%"
 ,scrollTrigger:{
     trigger:".tv_wrapper",
     start:100,
     end:"center",
     scrub:true,
 }})
-else gsap.to(".greetings",{ rotate:"40%",scale:9,opacity:0,transformOrigin:"center 70%"
+else gsap.to(".greetings",{ transform:"rotate(40%) scale(9)",opacity:0,transformOrigin:"center 70%"
 ,scrollTrigger:{
     trigger:".tv_wrapper",
     start:150,
@@ -89,6 +89,7 @@ h3{
     flex-direction: column;
     position: relative;
     z-index: -1;
+    will-change: transform;
 }
 
 .tv_wrapper::before {
@@ -100,6 +101,7 @@ h3{
   height: 100px; 
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.28)); 
   pointer-events: none; 
+
 }
 
 
