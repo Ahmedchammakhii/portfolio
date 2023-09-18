@@ -22,7 +22,7 @@ if (window.innerHeight > window.innerWidth && window.innerHeight>=1024) gsap.to(
 else gsap.to(".greetings",{ rotate:"40%",scale:10,opacity:0,transformOrigin:"center 70%"
 ,scrollTrigger:{
     trigger:".tv_wrapper",
-    start:180,
+    start:150,
     end:"center",
     scrub:true,
 }})
