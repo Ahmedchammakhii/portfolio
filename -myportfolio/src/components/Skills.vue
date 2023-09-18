@@ -114,7 +114,7 @@ gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
 <style scoped>
 .content_wrapper__skills {
     width: 100vw;
-    height: 60vh;
+    height:max-content;
     display: flex;
 font-family: avenir;
 padding-left: 5%;

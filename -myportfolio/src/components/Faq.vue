@@ -103,7 +103,7 @@ transition: all ease 1s;
 align-items: center;
 z-index: 50000;
 transition: all ease-in 1s;
-
+cursor: pointer;
 }
 .client {
   width: 50%;
@@ -147,8 +147,7 @@ h1 {
 .faq {
   margin-top: 50px;
   height: max-content;
-  min-height: 110vh;
-  width: 100vw;
+padding: 100px 0;  width: 100vw;
 position: relative;  
 z-index: 10;
 font-family: sanshaa;
@@ -227,16 +226,16 @@ transform: scale(.7) !important;
 #loadervideo {
     transform: scale(.1) translateY(110px) !important;
 
+}.all_faqs {
+  padding-left: 0% ;
+}
+h2 {
+  font-size: small;
 }
 }
 audio::-webkit-media-controls-panel {
   display: none;
 }
-.all_faqs {
-  padding-left: 0% !important;
-}
-h2 {
-  font-size: small;
-}
+
 </style>
 
