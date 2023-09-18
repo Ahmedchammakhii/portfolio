@@ -5,14 +5,7 @@ import gsap from "gsap"
 const train = ref("<Training>")
     onMounted(()=>{
 const timeline = gsap.timeline()
-timeline.to(".right_quote",{
-    opacity:0,scrollTrigger:{
-    trigger:".endoftimeline",
-    end:"bottom bottom",
-
-    scrub:true,
-}
-},"+=5").to(".right",{
+timeline.to(".right",{
     opacity:1,scrollTrigger:{
     trigger:".endoftimeline",
     end:"bottom bottom",
