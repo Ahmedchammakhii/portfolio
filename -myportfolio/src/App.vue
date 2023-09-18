@@ -22,7 +22,7 @@ if (counterH1) { c++;
  else counterH1.innerHTML = counterH1.innerHTML + "." ;
   time++
 console.log(time);
-if (time == 20) {
+if (time == 13) {
    clearInterval (interval) ;
 gsap.to(".loader",{y:"-100%",duration:1})
   }
