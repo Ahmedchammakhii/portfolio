@@ -24,7 +24,13 @@ const show = (number : number)=> {
 else {lastfaq.value = !lastfaq.value ; 
   var audio = document.querySelector("#myAudio") as HTMLAudioElement;
   var frame = document.querySelector("#frame") as HTMLVideoElement;
+  var item = document.querySelector(".b") as HTMLElement;
+  var item2 = document.querySelector(".b h2") as HTMLElement;
 
+if (item && item.style.height == "max-content" ) item.style.height = "0" 
+else {item.style.height = "max-content" }
+if (item2 &&item2.style.visibility=="visible"  ) item2.style.visibility="hidden" 
+else item2.style.visibility="visible" 
   if (audio != null) audio.play()
   if(frame != null) frame.play()
 
@@ -58,7 +64,7 @@ else {lastfaq.value = !lastfaq.value ;
 <h1 class="qst">HMED , DONT FORGET THAT WE NEED TO FINISH STRONG , HUH</h1>
 <h1 class="client">ASKED BY (you)</h1>
 </div>
-<div class="resp b" v-if="lastfaq.valueOf() === true" >
+<div class="resp b" >
 <img id="mediaplayer" src="/assets/windows-media-player-10.jpg" alt="Windows player">
 <h2 style="color: rgb(255, 255, 255);position: absolute;top:10%;width: 100%">A LIL BIT OF NOSTALGIAAA ? VOLUMEEE UP</h2>
 <iframe id="frame" src="//gifs.com/embed/windows-media-player-visualizations-oVrvEN"  frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
@@ -96,6 +102,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 transition: all ease 1s;
+will-change: height;
+
 }
 .onefaq {
   display: flex;
@@ -104,6 +112,7 @@ align-items: center;
 z-index: 50000;
 transition: all ease-in 1s;
 cursor: pointer;
+will-change: height;
 }
 .client {
   width: 50%;
@@ -238,6 +247,9 @@ audio::-webkit-media-controls-panel {
 }
 .b h2 {
   top: 35%;
+visibility: hidden;}
+.b {
+  height: 0;
 }
 
 </style>
