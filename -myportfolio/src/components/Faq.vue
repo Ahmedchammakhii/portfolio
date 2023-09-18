@@ -5,7 +5,7 @@ const faq = ref([
   {number :"01." ,title:"HMED , HOW MUCH IS A WEBSITE",desc:"Hmm, let me ask you something first: How much is a car? Depends on which one you want, right? Same with websites: Costs depend on your requirements, scope and features. Therefore your budget defines what I can do for you. But don't worry, I am happy to tell you exactly what you will get for your budget once it is defined.",who:"Client",showed:false}
 , {number :"02." ,title:"HMED , what web design trends can we expect soon ?",desc:"Old TVs on the streets will be the next big thing, according to trusted sources. Wallpaper patterns behind FAQs are also pretty hot right now. And rumor has it that every website needs at least one image of CHOUFLIHAL",who:"Client",showed:false}
 ,{number :"03.",title:"HMED , how do I become as awesome as you?",desc:"                " ,showed:false,who:"EVERYBODY"}
-, {number :"04.",title:"HMED ,why don't you have any social media account",desc:"WELL YOU GOTTA WATCH TAXI DRIVER ASAP" ,showed:false,who:"NONE"}
+, {number :"04.",title:"HMED ,why don't you have any social media account",desc:"I heard it's a black hole that sucks up all your time and energy, and I'm trying to maintain my status as a time-space continuum champion" ,showed:false,who:"NONE"}
 
 
 
@@ -199,8 +199,8 @@ transform: scale(.7);
 
     }
 .sbou3i {
-  scale: .5;
-  top: -4%;
+  scale: .7;
+  top: 0%;
   transform: translateX(-20%) !important ;
   opacity: .8;
 }
