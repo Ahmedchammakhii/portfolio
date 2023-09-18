@@ -23,8 +23,10 @@ const show = (number : number)=> {
   if (number!==5)faq.value[number].showed = !faq.value[number].showed
 else {lastfaq.value = !lastfaq.value ; 
   var audio = document.querySelector("#myAudio") as HTMLAudioElement;
-  
+  var frame = document.querySelector("#frame") as HTMLVideoElement;
+
   if (audio != null) audio.play()
+  if(frame != null) frame.play()
 
 }
 
@@ -59,7 +61,7 @@ else {lastfaq.value = !lastfaq.value ;
 <div class="resp" v-if="lastfaq.valueOf() === true" >
 <img id="mediaplayer" src="/assets/windows-media-player-10.jpg" alt="Windows player">
 <h2 style="color: rgb(255, 255, 255);position: absolute;top:10%;width: 100%">A LIL BIT OF NOSTALGIAAA ? VOLUMEEE UP</h2>
-<iframe src="//gifs.com/embed/windows-media-player-visualizations-oVrvEN" frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
+<iframe id="frame" src="//gifs.com/embed/windows-media-player-visualizations-oVrvEN"  frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
 </div>
 </div></div>
 <audio id="myAudio"  >
@@ -215,6 +217,8 @@ transform: scale(.6) translateX(-30%)  !important;
     transform: scale(.2) translateY(200px) !important;
 
 }
+
+
 }
 @media screen and (max-width:650px) {
      #mediaplayer {
@@ -227,6 +231,12 @@ transform: scale(.7) !important;
 }
 audio::-webkit-media-controls-panel {
   display: none;
+}
+.all_faqs {
+  padding-left: 0% !important;
+}
+h2 {
+  font-size: small;
 }
 </style>
 
