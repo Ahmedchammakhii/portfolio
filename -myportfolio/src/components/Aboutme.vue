@@ -43,6 +43,7 @@ article {
     height: 100vh;
     display: flex;
     position: relative;
+    z-index: 2;
 }
 .left {
     margin-top: 100px;
