@@ -72,6 +72,11 @@ input , textarea{
     height: 4vh;
 padding: 10px;
 }
+textarea{
+
+    height: 10vh;
+}
+
 button {
     width: 40%;
     height: 5vh;
