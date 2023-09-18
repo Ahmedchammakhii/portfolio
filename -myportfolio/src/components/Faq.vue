@@ -58,7 +58,7 @@ else {lastfaq.value = !lastfaq.value ;
 <h1 class="qst">HMED , DONT FORGET THAT WE NEED TO FINISH STRONG , HUH</h1>
 <h1 class="client">ASKED BY (you)</h1>
 </div>
-<div class="resp" v-if="lastfaq.valueOf() === true" >
+<div class="resp b" v-if="lastfaq.valueOf() === true" >
 <img id="mediaplayer" src="/assets/windows-media-player-10.jpg" alt="Windows player">
 <h2 style="color: rgb(255, 255, 255);position: absolute;top:10%;width: 100%">A LIL BIT OF NOSTALGIAAA ? VOLUMEEE UP</h2>
 <iframe id="frame" src="//gifs.com/embed/windows-media-player-visualizations-oVrvEN"  frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
@@ -79,7 +79,7 @@ else {lastfaq.value = !lastfaq.value ;
   width: 50%;
   display: flex;
   text-align: center;
-  padding: 50px;
+  padding: 70px 50px;
 }
 .resp {
   display: flex;
@@ -235,6 +235,9 @@ h2 {
 }
 audio::-webkit-media-controls-panel {
   display: none;
+}
+.b h2 {
+  top: 35%;
 }
 
 </style>
