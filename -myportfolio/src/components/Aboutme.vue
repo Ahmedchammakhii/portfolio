@@ -6,6 +6,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const about = ref("Crafting user friendly and aesthetic websites is not just a profession for me , it's my passion")
 onMounted(() => {
+    gsap.from("#main_container", {
+    opacity:0,
+    scrollTrigger: {
+      trigger: "#main_container",
+      start: "top top",
+      scrub: true,
+
+    }
+  })
     if (window.innerWidth >= 600) {
     gsap.to("#transition", {
     x: '35%',
