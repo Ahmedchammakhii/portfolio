@@ -10,7 +10,7 @@ onMounted(() => {
     opacity:0,
     scrollTrigger: {
       trigger: "#main_container",
-      start: "top top",
+      start: "top 40%",
       scrub: true,
 
     }
