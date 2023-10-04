@@ -126,6 +126,7 @@ will-change: height;
   height: 100%;
   background: #000;
   position: absolute;
+  left:0;
 bottom: -100%;
 transition: all ease 1s;
 opacity: .2;

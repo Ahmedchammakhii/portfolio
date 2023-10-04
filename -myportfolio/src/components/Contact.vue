@@ -32,7 +32,7 @@ display.value=!display.value      })
 <template>
     <address class="content_wrapper__contact">
 <h1>{{ "<"+contactTag+">" }}</h1>
-<p>Feel free to send an e-mail on Ahmedchammakhi2@gmail.com Or to Contact me on +21698648548</p>
+<p>Feel free to send an e-mail on Ahmedchammakhi2@gmail.com , to Contact me on +21698648548 or to check my <a href="https://drive.google.com/file/d/1Qtg6_Sl8ThQaqoB19zTXJ9BiHMGRZBps/view?usp=sharing"> CV </a></p>
 <form v-if="display==true" @submit.prevent="submitForm">
     <label for="name">Name:</label>
     <input type="text" id="name" v-model="data.name" required>
