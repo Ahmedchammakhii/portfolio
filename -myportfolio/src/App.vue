@@ -11,6 +11,7 @@ const projects=ref([{number:'01', name:"VAWZEN", description:" PORTFILO FOR A DI
 , {number:'02', name:"5I", description:" SUPER-IINTERACTIVE WEBSITE BUILT FOR A BRANDING AGENCY",link:"https://5i.vercel.app/"}
 ,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS",link:"https://afrah-eta.vercel.app/"}
 ,{number:'04', name:"E-TAFAKNA", description:"I PLAYED A PIVOTAL ROLE AS A TECH LEAD IN THE DEVELOPMENT OF TWO CUTTING-EDGE APPLICATIONS AND A ROBUST PLATFORM. ",link:"https://e-tafakna.com/"}
+,{number:'05', name:"EKOM", description:"A MODERN FULL E-COMMERCE IS CURRENTLY UNDER CONSTRUCTION ! STAY TUNED. ",link:"https://ekom.vercel.app/"}
 ])
 
 onMounted(()=>{
