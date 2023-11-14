@@ -106,7 +106,7 @@ gsap.to(".content_wrapper__skills",{opacity:0,scrollTrigger:{
 </div>
 
 <video autoplay muted loop >
-  <source src="/assets/videos/ch.mp4" type="video/mp4">
+  <source src="https://qclay.design/video/contact/ch.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video></div>
 <div class="endoftimeline" style="height: 20vh;"></div>
@@ -224,7 +224,7 @@ margin-right: 0;}
       display: none;
     }
     .right{
-        background: url("/assets/videos/ch.mp4") no-repeat;
+        background: url("https://qclay.design/video/contact/ch.mp4") no-repeat;
         background-size:cover;
     }
 }
