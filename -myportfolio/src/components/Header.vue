@@ -55,7 +55,7 @@ const thescreen = ()=>{
     align-items: center;
     transform: translateY(202.8px) translateX(2.9px) scale(1.01);
      ">
-  <img class="screen" :src="thescreen()"/> </div>
+  <img rel="preload" class="screen" :src="thescreen()"/> </div>
   </div>
   </div>
     </header>
