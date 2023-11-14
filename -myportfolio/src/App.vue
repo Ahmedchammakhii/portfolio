@@ -16,10 +16,11 @@ const projects=ref([{number:'01', name:"VAWZEN", description:" PORTFILO FOR A DI
 
 onMounted(()=>{
 const tl = gsap.timeline()
-tl.to(".cube",{ transform: "rotateX(15deg) rotateY(40deg)",duration:1
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(60deg)",duration:1
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(110deg)",duration:1
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(130deg)",duration:1
+tl.to(".cube",{ transform: "rotateX(15deg) rotateY(25deg)",duration:3
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(40deg)",duration:2
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(60deg)",duration:2
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(110deg)",duration:2
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(130deg)",duration:2
 }).to(".loader",{y:"-100%"}).then(()=>window.scrollTo(0,0))
 })
 </script>
@@ -84,7 +85,6 @@ h1,h3{
 .cube {
             position:fixed;
             transform-style: preserve-3d;
-            transform: rotateX(15deg) rotateY(25deg);
 			transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 			top: 40%;
         }
