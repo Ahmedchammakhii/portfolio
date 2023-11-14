@@ -3,10 +3,13 @@ import { onMounted, ref } from 'vue';
 import Aboutme from './components/Aboutme.vue';
 import Header from './components/Header.vue'
 import Oneproject from './components/Oneproject.vue';
-import Skills from "./components/Skills.vue"
 import  ContactVue from './components/Contact.vue';
 import Faq from './components/Faq.vue';
 import gsap from 'gsap';
+import {defineAsyncComponent} from 'vue'
+const Skills = defineAsyncComponent(
+  ()=>import ("./components/Skills.vue")
+)
 const projects=ref([{number:'01', name:"VAWZEN", description:" PORTFILO FOR A DIGITAL COMPANY MADE WITHIN 2 DAYS",link:"https://vawzen.org/"}
 , {number:'02', name:"5I", description:" SUPER-IINTERACTIVE WEBSITE BUILT FOR A BRANDING AGENCY",link:"https://5i.vercel.app/"}
 ,{number:'03', name:"AFRAH", description:" WEBSITE BUILT FOR A WEDDING PLANNER USING NEXTJS",link:"https://afrah-eta.vercel.app/"}
