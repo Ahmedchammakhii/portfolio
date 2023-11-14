@@ -67,7 +67,7 @@ else item2.style.visibility="visible"
 <div class="resp b" >
 <img id="mediaplayer" src="/assets/windows-media-player-10.jpg" alt="Windows player">
 <h2 style="color: rgb(255, 255, 255);position: absolute;top:10%;width: 100%">A LIL BIT OF NOSTALGIAAA ? VOLUMEEE UP</h2>
-<iframe id="frame" src="//gifs.com/embed/windows-media-player-visualizations-oVrvEN"  frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
+<iframe id="frame" src="../../public/assets/vz.mp4"   frameborder="0" scrolling="no" width="450px" height="360px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(.5);position: absolute;bottom: 10%;left: 5%;"></iframe>
 </div>
 </div></div>
 <audio id="myAudio"  >

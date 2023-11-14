@@ -15,39 +15,26 @@ const projects=ref([{number:'01', name:"VAWZEN", description:" PORTFILO FOR A DI
 ])
 
 onMounted(()=>{
-  let c  = 0
-  let time =0 ;
-  const interval = setInterval(()=>{
-    const counterH1 = document.querySelector(".container_load h1") as HTMLElement ;
-if (counterH1) { c++;
- if (c>3) { counterH1.innerHTML = counterH1.innerHTML.slice(0,counterH1.innerHTML.length-3) ; c=0}
- else counterH1.innerHTML = counterH1.innerHTML + "." ;
-  time++
-if (time == 13) {gsap.to(".loader",{y:"-100%",duration:1})
-
-   clearInterval (interval) ;
-   window.scrollTo(0,0)
-  }
-
-}
-
-  },600)
+const tl = gsap.timeline()
+tl.to(".cube",{ transform: "rotateX(15deg) rotateY(40deg)",duration:1
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(60deg)",duration:1
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(110deg)",duration:1
+}).to(".cube",{ transform: "rotateX(15deg) rotateY(130deg)",duration:1
+}).to(".loader",{y:"-100%"}).then(()=>window.scrollTo(0,0))
 })
 </script>
 
 <template>
   <div class="main_app" style="overflow: hidden; ">
   <div class="loader">
-    <div class="container_load">
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <h1 style="margin-top:50px;color: aliceblue;font-size:2vw;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> PLEASE WAIT , RESSOURCES ARE BEING IMPORTED </h1>
-</div>
+	<div class="cube">
+            <div class="face">AHMED CHAMMAKHI</div>
+            <div class="face">AHMED CHAMMAKHI</div>
+            <div class="face">AHMED CHAMMAKHI</div>
+            <div class="face">AHMED CHAMMAKHI</div>
+        </div>
+
+   
   </div>
 <Header></Header>
 <Aboutme></Aboutme>  
@@ -94,7 +81,31 @@ h1,h3{
 }
 
 
+.cube {
+            position:fixed;
+            transform-style: preserve-3d;
+            transform: rotateX(15deg) rotateY(25deg);
+			transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+			top: 40%;
+        }
 
+        .face {
+            position: absolute;
+            width: 400px;
+            height: 100px;
+          
+            line-height: 100px;
+            font-size: 20px;
+            color: #fff;
+			letter-spacing: .8rem;
+        }
+
+        .face:nth-child(1) { transform: translateZ(400px) translateX(-20px) }
+		.face:nth-child(2) { transform: rotateY(-90deg) translateZ(-200px) translateX(200px) }
+		.face:nth-child(3) { transform: rotateY(-90deg) translateZ(250px) translateX(200px); }
+
+        
+      
 ::-webkit-scrollbar-thumb {
   background: #888; 
   border-radius: 2rem 4rem;
@@ -112,6 +123,7 @@ h1,h3{
   background-color: #000000;
   z-index: 1000;position:fixed ;
   top: 0;
+  padding-left: 40%;
 }
 .container_load{
 	width:100vw;
@@ -121,133 +133,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-
-.ball {
-	width: 10px;
-	height: 10px;
-	margin: 10px auto;
-	border-radius: 50px;
-}
-
-.ball:nth-child(1) {
-	background: #ffffff;
-	-webkit-animation: right 1s infinite ease-in-out;
-	-moz-animation: right 1s infinite ease-in-out;
-	animation: right 1s infinite ease-in-out;
-}
-
-.ball:nth-child(2) {
-	background: #ffffff;
-	-webkit-animation: left 1.1s infinite ease-in-out;
-	-moz-animation: left 1.1s infinite ease-in-out;
-	animation: left 1.1s infinite ease-in-out;
-}
-
-.ball:nth-child(3) {
-	background: #ffffff;
-	-webkit-animation: right 1.05s infinite ease-in-out;
-	-moz-animation: right 1.05s infinite ease-in-out;
-	animation: right 1.05s infinite ease-in-out;
-}
-
-.ball:nth-child(4) {
-	background: #ffffff;
-	-webkit-animation: left 1.15s infinite ease-in-out;
-	-moz-animation: left 1.15s infinite ease-in-out;
-	animation: left 1.15s infinite ease-in-out;
-}
-
-.ball:nth-child(5) {
-	background: #ffffff;
-	-webkit-animation: right 1.1s infinite ease-in-out;
-	-moz-animation: right 1.1s infinite ease-in-out;
-	animation: right 1.1s infinite ease-in-out;
-}
-
-.ball:nth-child(6) {
-	background: #ffffff;
-	-webkit-animation: left 1.05s infinite ease-in-out;
-	-moz-animation: left 1.05s infinite ease-in-out;
-	animation: left 1.05s infinite ease-in-out;
-}
-
-.ball:nth-child(7) {
-	background: #ffffff;
-	-webkit-animation: right 1s infinite ease-in-out;
-	-moz-animation: right 1s infinite ease-in-out;
-	animation: right 1s infinite ease-in-out;
-}
-
-@-webkit-keyframes right {
-	0% {
-		-webkit-transform: translate(-15px);
-	}
-	50% {
-		-webkit-transform: translate(15px);
-	}
-	100% {
-		-webkit-transform: translate(-15px);
+@media  screen and (max-width:400px) {
+	.cube {
+		scale:.2
 	}
 }
 
-@-webkit-keyframes left {
-	0% {
-		-webkit-transform: translate(15px);
-	}
-	50% {
-		-webkit-transform: translate(-15px);
-	}
-	100% {
-		-webkit-transform: translate(15px);
-	}
-}
-
-@-moz-keyframes right {
-	0% {
-		-moz-transform: translate(-15px);
-	}
-	50% {
-		-moz-transform: translate(15px);
-	}
-	100% {
-		-moz-transform: translate(-15px);
-	}
-}
-
-@-moz-keyframes left {
-	0% {
-		-moz-transform: translate(15px);
-	}
-	50% {
-		-moz-transform: translate(-15px);
-	}
-	100% {
-		-moz-transform: translate(15px);
-	}
-}
-
-@keyframes right {
-	0% {
-		transform: translate(-15px);
-	}
-	50% {
-		transform: translate(15px);
-	}
-	100% {
-		transform: translate(-15px);
-	}
-}
-
-@keyframes left {
-	0% {
-		transform: translate(15px);
-	}
-	50% {
-		transform: translate(-15px);
-	}
-	100% {
-		transform: translate(15px);
-	}
-}
 </style>
 
