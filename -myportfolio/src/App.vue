@@ -18,28 +18,14 @@ const projects=ref([{number:'01', name:"VAWZEN", description:" PORTFILO FOR A DI
 ])
 
 onMounted(()=>{
-const tl = gsap.timeline()
-tl.to(".cube",{ transform: "rotateX(15deg) rotateY(25deg)",duration:3
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(40deg)",duration:2
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(60deg)",duration:2
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(110deg)",duration:2
-}).to(".cube",{ transform: "rotateX(15deg) rotateY(130deg)",duration:2
-}).to(".loader",{y:"-100%"}).then(()=>window.scrollTo(0,0))
-})
-</script>
+  
+})</script>
 
 <template>
   <div class="main_app" style="overflow: hidden; ">
-  <div class="loader">
-	<div class="cube">
-            <div class="face">AHMED CHAMMAKHI</div>
-            <div class="face">AHMED CHAMMAKHI</div>
-            <div class="face">AHMED CHAMMAKHI</div>
-            <div class="face">AHMED CHAMMAKHI</div>
-        </div>
+<div class="loader">
 
-   
-  </div>
+</div>  
 <Header></Header>
 <Aboutme></Aboutme>  
 <div class="projects" v-for="item in projects">
@@ -85,29 +71,6 @@ h1,h3{
 }
 
 
-.cube {
-            position:fixed;
-            transform-style: preserve-3d;
-			transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-			top: 40%;
-        }
-
-        .face {
-            position: absolute;
-            width: 400px;
-            height: 100px;
-          
-            line-height: 100px;
-            font-size: 20px;
-            color: #fff;
-			letter-spacing: .8rem;
-        }
-
-        .face:nth-child(1) { transform: translateZ(400px) translateX(-20px) }
-		.face:nth-child(2) { transform: rotateY(-90deg) translateZ(-200px) translateX(200px) }
-		.face:nth-child(3) { transform: rotateY(-90deg) translateZ(250px) translateX(200px); }
-
-        
       
 ::-webkit-scrollbar-thumb {
   background: #888; 
@@ -119,28 +82,6 @@ h1,h3{
   background: #000000; 
 }
 
-.loader {
-  width: 100%;
-  height: 100%;
-  min-height: 500vh;
-  background-color: #000000;
-  z-index: 1000;position:fixed ;
-  top: 0;
-  padding-left: 40%;
-}
-.container_load{
-	width:100vw;
-	height: 100vh;
-	padding-top: 100px;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-@media  screen and (max-width:400px) {
-	.cube {
-		scale:.2
-	}
-}
 
 </style>
 
